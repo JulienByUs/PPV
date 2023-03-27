@@ -159,7 +159,7 @@ export default function HomePage() {
     const lent = document.querySelectorAll(".child-project").length - 1;
     let clickCounterNext = 0;
 
-    function animateElements(direction) {
+    function animateElementsIndex(direction) {
       const targets = document.querySelectorAll('.child-project');
       const target = document.querySelector('.child-project');
 
@@ -191,14 +191,14 @@ export default function HomePage() {
     leftButton.addEventListener('click', () => {
       console.log('left');
       if (clickCounterNext < lent) {
-        animateElements('left');
+        animateElementsIndex('left');
       }
     });
 
     rightButton.addEventListener('click', () => {
       console.log('right');
       if (clickCounterNext > 0) {
-        animateElements('right');
+        animateElementsIndex('right');
       }
     });
 
